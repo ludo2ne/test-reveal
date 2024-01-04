@@ -13,6 +13,7 @@
 * Communication client-serveur
 * :construction: idées : CICD, logs, documentation
 
+---
 
 ### Généré avec RevealJS
 

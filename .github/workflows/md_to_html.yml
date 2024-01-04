@@ -1,0 +1,26 @@
+name: markdown to html
+
+on:
+  - push
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+          - 18
+          - 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Converts Markdown to HTML
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: tp/tp1.md
+          output: tp/tp1.html
