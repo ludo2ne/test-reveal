@@ -176,11 +176,11 @@ function compileSass() {
   });
 }
 
-gulp.task('css-themes', () => gulp.src(['./css/theme/source/*.{sass,scss}'])
+gulp.task('css-themes', () => gulp.src(['docs/css/theme/source/*.{sass,scss}'])
         .pipe(compileSass())
         .pipe(gulp.dest('./dist/theme')))
 
-gulp.task('css-core', () => gulp.src(['css/reveal.scss'])
+gulp.task('css-core', () => gulp.src(['docs/css/reveal.scss'])
     .pipe(compileSass())
     .pipe(autoprefixer())
     .pipe(minify({compatibility: 'ie9'}))
@@ -256,7 +256,7 @@ gulp.task('qunit', () => {
     } );
 } )
 
-gulp.task('eslint', () => gulp.src(['./js/**', 'gulpfile.js'])
+gulp.task('eslint', () => gulp.src(['docs/js/**', 'gulpfile.js'])
         .pipe(eslint())
         .pipe(eslint.format()))
 
@@ -270,12 +270,12 @@ gulp.task('package', gulp.series(() =>
 
     gulp.src(
         [
-            './index.html',
-            './dist/**',
-            './lib/**',
-            './images/**',
-            './plugin/**',
-            './**/*.md'
+            'docs/index.html',
+            'docs/dist/**',
+            'docs/lib/**',
+            'docs/images/**',
+            'docs/plugin/**',
+            'docs/**/*.md'
         ],
         { base: './' }
     )
@@ -283,7 +283,7 @@ gulp.task('package', gulp.series(() =>
 
 ))
 
-gulp.task('reload', () => gulp.src(['index.html'])
+gulp.task('reload', () => gulp.src(['docs/index.html'])
     .pipe(connect.reload()));
 
 gulp.task('serve', () => {
