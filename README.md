@@ -11,7 +11,16 @@
 * Communication avec une base de données en python
 * Sécurité informatique
 * Communication client-serveur
-* :construction: idées : CICD, logs, documentation
+
+## :construction: Todo 
+
+* [ ] diapo intro
+  * [ ] Projet -> truc à faire ou ne pas faire
+  * [ ] TP -> exmpliquer les settings...
+* [ ] Commencer par Git
+* [ ] CICD
+* [ ] logs
+* [ ] documentation
 
 ---
 
